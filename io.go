@@ -39,13 +39,13 @@ func NewSocketIO(options *SocketOptions) *IO {
 	}
 }
 
-// Emit Emit emits events
+// Emit emits events
 func (io *IO) Emit() error { return nil }
 
-// On On adds a listener
+// On adds a listener
 func (io *IO) On(event string, h func(socket Socket)) {}
 
-// Of Of sets up a namespace
+// Of sets up a namespace
 func (io *IO) Of(namespace string) *IO { return &IO{Options: io.Options} }
 
 // NextFunc Next middleware function
